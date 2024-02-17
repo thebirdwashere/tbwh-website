@@ -20,6 +20,7 @@ header {
     padding-top: 35px;
     overflow: hidden;
     position: fixed;
+    z-index: 1000;
 }
 
 nav.main-nav {
@@ -34,8 +35,8 @@ nav.main-nav {
     padding-top: 35px;
     overflow: hidden;
     position: fixed;
-    left: 75px;
-    display: none;
+    left: 0px;
+    transition: 0.5s left ease;
 }
 
 nav.sub-nav {
@@ -87,7 +88,7 @@ h1 {
     transition: 0.5s color ease, 0.5s letter-spacing ease;
 }
 
-.header-link:hover {
+header:hover h1 .header-link {
     color: #ffffff;
     letter-spacing: 2px;
 }
@@ -105,17 +106,17 @@ h1 {
 }
 
 header:hover + nav {
-    display: flex;
+    left: 75px;
 }
 
 nav:hover {
-    display: flex;
+    left: 75px;
 }
 
 nav:hover + nav {
     display: flex;
 }
 
-nav:hover:has(nav) {
+nav:hover:has(~ nav) {
     display: flex;
 }
