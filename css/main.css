@@ -3,9 +3,22 @@
     font-family: "DIN";
 }
 
+@keyframes page-load {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
+}
+
+body {
+    animation: 0.5s page-load ease;
 }
 
 header {
@@ -77,14 +90,14 @@ h1 {
     writing-mode: vertical-lr;
 }
 
-.header-link {
+h1 {
     color: #cecece;
     text-decoration: none;
     letter-spacing: normal;
     transition: 0.5s color ease, 0.5s letter-spacing ease;
 }
 
-header:hover h1 .header-link {
+header:hover h1 {
     color: #ffffff;
     letter-spacing: 2px;
 }
