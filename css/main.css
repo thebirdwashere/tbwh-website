@@ -85,7 +85,6 @@ ul {
 
 li {
     display: inline-block;
-    padding: 0 30px;
 }
 
 #header-icon {
@@ -111,6 +110,7 @@ h1 {
     text-decoration: none;
     letter-spacing: normal;
     transition: 0.5s color ease, 0.5s letter-spacing ease;
+    padding: 0 30px;
 }
 
 .nav-list-link:hover {
