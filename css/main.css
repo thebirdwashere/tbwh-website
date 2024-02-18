@@ -1,7 +1,5 @@
-@font-face {
-    src: url("../fonts/DIN\ Condensed\ Regular.ttf");
-    font-family: "DIN";
-}
+/* INCLUDE font "DIN" */
+@font-face { src: url("../fonts/DIN\ Condensed\ Regular.ttf"); font-family: "DIN"; }
 
 @keyframes page-load {
     from {
@@ -12,20 +10,17 @@
     }
 }
 
-* {
-    margin: 0;
-    padding: 0;
-}
+* { margin: 0; padding: 0; }
 
-body {
-    animation: 0.5s page-load ease;
-}
+body { animation: 0.5s page-load ease; }
 
-header {
+.page-header {
     background: #000000;
     color: #ffffff;
+
     font-family: "DIN";
     font-size: 20px;
+
     display: flex;
     align-items: center;
     width: 75px;
@@ -62,6 +57,7 @@ nav.main-nav {
     position: fixed;
     left: 0px;
     transition: 0.5s left ease;
+    z-index: 999;
 }
 
 nav.sub-nav {
@@ -76,8 +72,8 @@ nav.sub-nav {
     padding-top: 35px;
     overflow: hidden;
     position: fixed;
-    left: 150px;
-    display: none;
+    left: 0px;
+    transition: 0.5s left ease;
 }
 
 
@@ -110,20 +106,14 @@ h1 {
     transition: 0.5s color ease, 0.5s letter-spacing ease, 0.5s padding-top ease;
 }
 
-header:hover h1 {
-    color: #ffffff;
-    letter-spacing: 2px;
-    padding-top: 0px;
-}
-
-.nav-link {
+.nav-list-link {
     color: #cecece;
     text-decoration: none;
     letter-spacing: normal;
     transition: 0.5s color ease, 0.5s letter-spacing ease;
 }
 
-.nav-link:hover {
+.nav-list-link:hover {
     color: #ffffff;
     letter-spacing: 2px;
 }
@@ -132,14 +122,22 @@ header:hover + nav {
     left: 75px;
 }
 
-nav:hover {
+nav.main-nav:hover {
     left: 75px;
 }
 
-nav:hover + nav {
-    display: flex;
+#header-nav-group:hover header h1 {
+    color: #ffffff;
+    letter-spacing: 2px;
+    padding-top: 0px;
 }
 
-nav:hover:has(~ nav) {
-    display: flex;
+#header-nav-group:hover header i {
+    color: #ffffff00;
+}
+
+main {
+    width: calc(100vw - 75px);
+    position: relative;
+    left: 75px;
 }
