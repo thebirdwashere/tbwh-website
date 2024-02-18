@@ -147,10 +147,6 @@ section {
     padding: 30px;
 }
 
-section:nth-child(odd) {
-    background-color: #cecece;
-}
-
 h2 {
     font-family: 'DIN';
     font-size: 50px;
@@ -189,10 +185,23 @@ img {
     color: #ffffff;
 }
 
-.intro-section {
-    
-}
-
 table {
     font-family: sans-serif;
+}
+
+.main-header-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    overflow: hidden;
+    padding: 0px;
+    width: 100%;
+    background-color: #242424;
+}
+
+.main-header-section h2 {
+    margin-top: 6px;
+    font-size: 150px;
+    color: #ffffff;
 }
