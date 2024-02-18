@@ -27,13 +27,25 @@ header {
     font-family: "DIN";
     font-size: 20px;
     display: flex;
-    justify-content: center;
+    align-items: center;
     width: 75px;
     height: 100vh;
-    padding-top: 35px;
     overflow: hidden;
     position: fixed;
     z-index: 1000;
+    flex-direction: column;
+    padding-top: 35px;
+}
+
+i {
+    color: #cecece;
+    font-family: "DIN";
+    font-size: 30px;
+    transition: 0.5s color ease;
+}
+
+header:hover i {
+    color: #ffffff00;
 }
 
 nav.main-nav {
@@ -88,18 +100,19 @@ li {
 h1 {
     user-select: none;
     writing-mode: vertical-lr;
-}
-
-h1 {
+    padding-top: 40px;
+    position: relative;
+    top: -30px;
     color: #cecece;
     text-decoration: none;
     letter-spacing: normal;
-    transition: 0.5s color ease, 0.5s letter-spacing ease;
+    transition: 0.5s color ease, 0.5s letter-spacing ease, 0.5s padding-top ease;
 }
 
 header:hover h1 {
     color: #ffffff;
     letter-spacing: 2px;
+    padding-top: 0px;
 }
 
 .nav-link {
