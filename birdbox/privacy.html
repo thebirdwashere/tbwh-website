@@ -16,7 +16,7 @@
             <p>BirdBox may be collecting the following information on users, such as:</p>
             <ul>
                 <li>
-                    Content of deleted messages users sent in servers (only when the message is deleted, and only if the user who sent it has snipes enabled.)
+                    Content of deleted messages users sent in servers (only if the user who sent it has snipes enabled.)
                 </li>
                 <li>
                     Lyric/image responses (only if manually added by the admins of BirdBox)
@@ -35,12 +35,26 @@
             <ul>
                 <li>
                     HTTP server logs containing your IP address, user agent and pages visited on the website
-                    <br>automatically stored by NGINX
+                    <br>automatically stored by NGINX (the web server that the BirdBox website uses.)
                 </li>
             </ul>
             <p>Messages are stored plaintext in the BirdBox database (only on the server BirdBox is running on),
                 however these messages are also unencrypted on Discord's end and can also be collected by the Discord Client.
             </p>
+            <p>Data collected for snipes is the following:</p>
+            <ul>
+                <li>
+                    Message content
+                </li>
+                <li>
+                    The username of the person who sent the deleted message
+                </li>
+                <li>
+                    Time and date of when the deleted message was sent
+                </li>
+                <li>The URL of attachments/images sent in the message (attachment/image content is not stored by BirdBox, only the Discord CDN,
+                    BirdBox simply sends a link to the file on the Discord CDN.)</li>
+            </ul>
             <p>No data is sent to the BirdBox developers or anyone else, and the data is only stored in the BirdBox database file which is stored only on the server running BirdBox</p>
             <p>The only ways to access the data is by directly viewing the database file, or via commands that use the database.</p>
             <h2>Information about other instances.</h2>
@@ -56,7 +70,7 @@
             <p>If your instance is not run by TheBirdWasHere, please ask the owner of your instance for details on what data is collected,
                 or for a copy of the source code, as the license that BirdBox uses requires them to provide the source code upon request.
             </p>
-            <h3>BirdBox is licensed under the GNU General Public License v3.0, if you would like more information about this license, visit the link below
+            <h3>BirdBox is licensed under the GNU General Public License v3.0, if you would like more information about this license, visit the link below.
             </h3>
             <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">https://www.gnu.org/licenses/gpl-3.0.en.html</a>
         </header>
